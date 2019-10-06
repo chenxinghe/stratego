@@ -1,0 +1,26 @@
+
+//example of format of one Game document in MongoDB
+//Zihao's current plan is to only use "board" attribute for each turn.
+
+{
+  "username":"id",        //Username of the player, used to pull games from DB
+  "result":"WIN:LOSS",    //Result of game, either WIN or LOSS (wikipedia says draw is possible but it is not in official rules)
+  "finished":"true or false", //whether game is finished or not
+  "board_start":[],     //Arrays which represent board states at the start of the game
+  "start_time": "time", //time the gamr was started
+  "pieces_left": [[]], //array of pieces left for each player
+  "turns":                //Array of turns starting from first move to game ending move.
+        [{
+        "player":"0(ai) or 1(player)",  //the player in control this turn
+        "board":[],                   //board state at end of turn
+        "piece_number": "piece#",       //piece # of piece that took action this turn
+        "piece_action":"move:attack",   //the action that a piece took this turn, move or attack
+        "move_location":["x","y"],      //x,y coords of where the piece moved -- can be null if piece didnt move
+                                        //data if the piece attacked -- can be null if piece didnt attack
+        "piece_attacked":"piece#",      //piece # of the piece that was attacked
+        "attack_location":["y","x"],    //y,x coords of piece that was attacked
+        "pieces_lost":[]                //all pieces that died this turn -- can be null
+        }]
+}
+
+//last turn in array = winning turn

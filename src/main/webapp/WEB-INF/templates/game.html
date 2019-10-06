@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<!--<script src="webjars/jquery/3.3.1/jquery.min.js"></script>-->
+<script th:src="@{webjars/jquery/3.3.1/jquery.min.js}"></script>
+<script th:src="@{js/game/point.js}"></script>
+<script th:src="@{js/game/painter.js}"></script>
+<script th:src="@{js/game/chesspieces.js}"></script>
+<script th:src="@{js/game/player.js}"></script>
+<script th:src="@{js/game/ai.js}"></script>
+<script th:src="@{js/game/game.js}"></script>
+<script th:src="@{js/game/utilities.js}"></script>
+<link rel="stylesheet" th:href="@{css/style.css}">
+<link rel="icon" type="image/png" href="../img/favicon-32x32.png" sizes="32x32" />
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"  th:href="@{css/game.css}"/>
+    <title>Stratego - Game</title>
+</head>
+
+
+<div class = "c_left_div" id = "left_div">
+    <table style = "witdh: 252px; border-collapse: separate; border-spacing: 0px 0px; padding: 0px;">
+        <tr>
+            <td>
+                <p style="font-size: 50px; text-align: center" class="userName">User Name</p>
+            </td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td>
+                <button  class = btn type = "button" id = newgame disabled> New Game </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class = btn type = "button" id = start disabled> Start </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class = btn type = "button" id = setup disabled> Setup </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button  class = btn type = "button" id = quickmove disabled> Quick Move </button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button  class = btn type = "button" id = back > Back </button>
+            </td>
+        </tr>
+
+    </table>
+</div>
+
+<body class = background>
+<div style = "display:inline">
+    <div class = "chessboard_parent" style="float:left">
+        <div  class = "chessboard">
+            <table id = tb width="840" height="640">
+                <tr>
+                    <td id = "tb_canvas" width="640" height="640">
+                        <canvas id="canvas_cb" width="640" height="640"> </canvas>
+                    </td>
+                    <td id = "tb_right1" width="200" height="640">
+                        <canvas id="canvas_st" width="200" height="640"></canvas>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+<script >
+    Game.start();
+</script>
+<script>
+    $(document).ready(function () {
+        $(".userName").load("/loadUserInfo", function(){
+            $(".userName").text("Hi, " + $(".userName").text());
+        })
+    });
+    $("#back").on("click", function(){
+        window.location.href= "/infoPage";
+    })
+</script>
+
+</html>

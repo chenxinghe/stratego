@@ -1,0 +1,221 @@
+.background{
+    background-image:url("../img/background.png");
+    background-size:cover;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    min-width: 1000px;
+    z-index:-10;
+    zoom: 1;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+}
+
+.login{
+    /*z-index: 2;*/
+    position:absolute;
+    width: 350px;
+    margin:0px;
+    padding: 0px;
+    /*border-radius: 5px;*/
+    height: 100%;
+    background: gold;
+    /*box-shadow: 0px 0px 0px #333333;*/
+    /*!*top: 0px;left: 9.5%;*!*/
+    /*margin-top: -250px;*/
+    /*margin-left: -175px;*/
+    /*transition: all 1s;*/
+    opacity: 0.8;
+}
+.login-top{
+    font-size: 24px;
+    margin-top: 100px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    color: #333333;
+    margin-bottom: 50px;
+}
+.login-center{width: 100%;
+    box-sizing: border-box;
+    padding: 0 40px;
+    margin-bottom: 30px;
+}
+.login-center-img{
+    width: 20px;
+    height: 20px;float: left;
+    margin-top: 5px;
+}
+.login-center-img>img{width: 100%;}
+.login-center-input{
+    float: left;
+    width: 230px;
+    margin-left: 15px;
+    height: 30px;
+    position: relative;
+}
+.login-center-input input{
+    z-index: 2;
+    transition: all 0.5s;
+    padding-left: 10px;color: #333333;
+    width: 100%;height: 30px;
+    border: 0;
+    border-bottom: 1px solid #cccccc;
+    border-top: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    box-sizing: border-box;
+    outline: none;
+    position: relative;
+}
+
+.login-center-input-text{
+    background: white;
+    padding: 0 5px;
+    position: absolute;z-index: 0;opacity: 0;height: 20px;
+    top: 50%;margin-top: -10px;
+    font-size: 14px;left: 5px;color: dodgerblue;line-height: 20px;
+    transition: all 0.5s;
+    -moz-transition: all 0.5s;}
+
+
+.login-button{
+    /*cursor: pointer;*/
+    width: 250px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background-color: dodgerblue;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-left: 50px;
+    color: white;
+
+
+}
+.info-title{
+    text-align:center;
+    font-size: x-large;
+    color: black;
+}
+.info-center{
+    text-align:center;
+}
+.info-right{
+    text-align: right;
+}
+
+
+.my-custom-scrollbar {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+}
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+.sidenav {
+    height: 100%;
+    width: 302px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    background-color: #ffc81e;
+    overflow-x: hidden;
+}
+
+.sidenav a {
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidenav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.content {
+    position: absolute;
+    margin:auto;
+    margin-left: 302px;
+    width: 1000px;
+    length: 800px;
+    background: white;
+    opacity: 0.8;
+    top: 8%; bottom: 8%; left: 8%; right: 8%;
+    box-shadow: 0px 0px 30px #ffe700;
+
+}
+.btn1 {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+.btn1:hover {background: #eee;}
+
+.btn2 {
+    margin: 0;
+    position: relative;
+    background-color: #ffd700;
+    border: none;
+    font-size: 28px;
+    color: #000000;
+    padding: 20px;
+    width: 302px;
+    text-align: left;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.btn2:hover:enabled  {
+    background-color: #000000;
+    color: #ffffff;
+    opacity: 0.8
+}
+
+.prev{
+    color: green;
+}
+
+.next{
+    color: orange;
+}
+
+
+.scrollbar {
+    position: relative;
+    height: 500px;
+    overflow: auto;
+}
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+
+.btn2[disabled=disabled], button:disabled {
+    color: rgba(0, 0, 0, 0.10);
+}
+
+.tdhs{
+    width: 3%;
+}
+.tdhsap{
+    width: 10%;
+}

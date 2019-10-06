@@ -1,0 +1,61 @@
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<link rel="stylesheet" th:href="@{css/style.css}">
+<link rel="icon" type="image/png" href="../img/favicon-32x32.png" sizes="32x32" />
+<head>
+<meta charset="utf-8">
+<title>Stratego - Log In</title>
+<script src="webjars/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#loginbtn").click(function(){
+            $.post("/login", {userName: $("#userName").val (), password: $("#password").val()}, function (result){
+                if(result.success=="true"){
+                   window.location.href= "/infoPage";
+                }else{
+                    alert("Please check your password!")
+                }
+
+            })
+        })
+        $(document).ready(function (){
+            $("#signupbtn").click(function(){
+                window.location.href= "signupPage";
+            })
+
+        })
+    })
+
+</script>
+</head>
+<body style="padding: 0px;margin:0px;">
+    
+    <div class = background>
+    </div>
+
+    <div class="login">
+            <div class="login-top">
+            Login
+            </div>
+        <div class="login-center clearfix">
+            <div class="login-center-img"><img src="img/name.png"></div>
+            <div class="login-center-input">
+                <input id="userName" type="text" name="" value="" placeholder="please enter your username"
+                    onfocus="this.placeholder=''" onblur="this.placeholder='please enter your username'">
+
+            </div>
+        </div>
+        <div class="login-center clearfix">
+            <div class="login-center-img"><img src="img/password.png"></div>
+            <div class="login-center-input">
+                <input id= "password" type="password" name="" value="" placeholder="enter your password"
+                    onfocus="this.placeholder=''" onblur="this.placeholder='enter your password'">
+
+            </div>
+        </div>
+
+
+        <input  id = "loginbtn" class= "login-button" type="button" value = "log in" />
+        <input  id = "signupbtn" class= "login-button" type="button" value = "sign up" />
+    </div>    
+</body>
+</html>

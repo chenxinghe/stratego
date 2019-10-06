@@ -1,0 +1,32 @@
+server:
+  port: 80
+  address: 0.0.0.0
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+  #MySQL for user data
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://cs-goldteam-server.mysql.database.azure.com:3306/stratego
+    username: goldroot@cs-goldteam-server
+    password: Cse#)*Gold
+  session:
+    store-type: jdbc
+    jdbc:
+      initialize-schema: always
+      schema: classpath:org/springframework/session/jdbc/schema-mysql.sql
+      table-name: SPRING_SESSION
+  #MongoDB for game data
+  data:
+    mongodb:
+      uri: mongodb://goldroot:Cse#)*Gold@40.85.171.57:27017/test
+      #IP: 40.85.171.57 Port: 27017
+      #Username: goldroot Password: Cse#)*Gold
+#  thymeleaf:
+#    mode: LEGACYHTML5
+#    cache: false
+
